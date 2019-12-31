@@ -1,0 +1,41 @@
+-main ApplicationMain 
+-cp C:/HaxeToolkit/haxe/lib/flixel/4,6,3
+-D flixel=4.6.3
+--macro openfl._internal.macros.ExtraParams.include()
+-cp C:/HaxeToolkit/haxe/lib/openfl/8,9,5/src
+-D openfl=8.9.5
+--macro lime._internal.macros.DefineMacro.run()
+-cp C:/HaxeToolkit/haxe/lib/lime/7,6,3/src
+-D lime=7.6.3
+-cp C:/HaxeToolkit/haxe/lib/flixel-addons/2,7,5
+-D flixel-addons=2.7.5
+-cp source
+-D lime-openal
+-D ANDROID_SETUP=true
+-D ANDROID_NDK_ROOT=C:\Users\Thierry\.android
+-D native
+-D lime-curl
+-D openfl-native
+-D lime-harfbuzz
+-D tools=7.6.3
+-D ANDROID_SDK=D:\Android_Utils
+-D lime-cairo
+-D FLX_NO_DEBUG
+-D lime-opengl
+-D no-compilation
+-D NAPE_RELEASE_BUILD
+-D FLX_NO_TOUCH
+-D lime-native
+-D lime-vorbis
+-D JAVA_HOME=C:\Program Files (x86)\Common Files\Oracle\Java\javapath
+-D lime-cffi
+-D windows
+-D desktop
+--remap flash:openfl
+--macro flixel.system.macros.FlxDefines.run()
+--connect
+6000
+-cp export/hl/haxe
+-hl export/hl/obj/ApplicationMain.hl
+--macro keep("Main")
+-debug

@@ -15,7 +15,7 @@ class Player extends FlxSprite {
 
             this.loadGraphic("assets/images/spriteSheet_dbl.png", true, 96, 98);
             //this.setGraphicSize(96, 98);
-            this.animation.add("idle", [0, 1,], 5, true);
+            this.animation.add("idle", [0, 1,], 3, true);
             this.animation.play("idle");
             this.drag.x = 2200; // Décceleration
             //makeGraphic(48, 49, FlxColor.RED);
@@ -44,7 +44,7 @@ class Player extends FlxSprite {
         else if (this.x <= 0) this.x = FlxG.width;
     }
     private function gravity(){
-        this.acceleration.y += 2;
+        this.acceleration.y += 5;
     }
     override public function update(elapsed:Float):Void {
         if(Math.abs(velocity.x) <= _maxSpeed)
